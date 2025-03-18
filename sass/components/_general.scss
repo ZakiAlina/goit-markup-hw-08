@@ -1,0 +1,70 @@
+body {
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.03em;
+    color: $title-color;
+    background-color: $background-color;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.button {
+    cursor: pointer;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &--grey {
+        background-color: $secondary-background-color;
+    }
+
+    &--no-padding-top {
+        padding-top: 0;
+    }
+}
+
+.title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: calc(42.19 / 36);
+    text-align: center;
+    color: $title-color;
+}
+
+.icon {
+    fill: currentColor;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+}

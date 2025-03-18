@@ -1,0 +1,30 @@
+.filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filters__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.filters__btn {
+    min-width: 64px;
+    padding: 6px 20px;
+    font-weight: 500;
+    line-height: calc(26 / 16);
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    color: $title-color;
+    background: $filter-btn-bgcolor;
+    transition: color $timing-function,
+        background-color $timing-function, box-shadow $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $light-text-color;
+        background: $accent-color;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+            0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    }
+}

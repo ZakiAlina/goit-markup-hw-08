@@ -1,0 +1,15 @@
+.logo {
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: calc(30.52 / 26);
+    color: $accent-color;
+}
+
+.navigation__logo {
+    color: $dark-text-logo;
+}
+
+.footer__logo {
+    color: $light-text-logo;
+}
