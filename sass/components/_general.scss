@@ -6,11 +6,22 @@ body {
 }
 
 .container {
-    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+    }
 }
 
 .visually-hidden {
@@ -31,15 +42,15 @@ body {
 }
 
 .button {
-    cursor: pointer;
-    border: 0;
     margin: 0;
     padding: 0;
+    cursor: pointer;
+    border: 0;
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     &--grey {
         background-color: $secondary-background-color;
@@ -48,14 +59,28 @@ body {
     &--no-padding-top {
         padding-top: 0;
     }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .title {
-    margin-bottom: 50px;
-    font-size: 36px;
-    line-height: calc(42.19 / 36);
     text-align: center;
     color: $title-color;
+
+    @media screen and (min-width: $mobile) {
+        font-size: 28px;
+        line-height: 1;
+        margin-bottom: 30px;
+        }
+    
+    @media screen and (min-width: $desktop) {
+        font-size: 36px;
+        line-height: calc(42.19 / 36);
+        margin-bottom: 50px;
+    }
 }
 
 .icon {

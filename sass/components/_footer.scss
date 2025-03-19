@@ -5,12 +5,22 @@
 }
 
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+
+  @media screen and (min-width:$desktop) {
+    display: flex;
+    align-items: baseline;
+  }
+
 }
 
 .address__container {
-  margin-right: 70px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width:$desktop) {
+    margin-right: 70px;
+  }
+
 }
 
 .address {

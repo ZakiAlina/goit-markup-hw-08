@@ -1,14 +1,27 @@
 .features {
-    display: flex;
-    justify-content: center;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        justify-content: center;
+    }
+
 }
 
 .features__item {
-    width: calc((100% - 90px) / 4);
+    width: 100%;
 
     &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: calc((100% - 90px) / 4);
+            
+        &:not(:last-child) {
             margin-right: 30px;
         }
+    }
+
 }
 
 .features__box {

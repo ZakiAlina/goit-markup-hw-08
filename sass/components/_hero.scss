@@ -1,12 +1,19 @@
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
     text-align: center;
+
+    @media screen and (min-width: $mobile) {
+        padding-top: 118px;
+        padding-bottom: 118px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
 }
 
 .hero__overlay {
-    max-width: 1600px;
-    height: 600px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
     background-color: $hero-background-color;
@@ -17,16 +24,34 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media screen and (min-width: $mobile) {
+
+       
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: 1600px;
+        height: 600px;
+    }
 }
 
 .hero__title {
     margin-bottom: 30px;
-    font-size: 44px;
     font-weight: 900;
-    line-height: calc(60 / 44);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $hero-text-color;
+
+    @media screen and (min-width: $mobile) {
+        font-size: 26px;
+        line-height: calc(42 / 26);
+    }
+    
+    @media screen and (min-width: $desktop) {
+        font-size: 44px;
+        line-height: calc(60 / 44);
+    }
 }
 
 .hero__btn {
