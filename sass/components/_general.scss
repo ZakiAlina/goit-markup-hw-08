@@ -3,6 +3,10 @@ body {
     letter-spacing: 0.03em;
     color: $title-color;
     background-color: $background-color;
+
+    &.modal-open {
+        overflow: hidden;
+    }
 }
 
 .container {
@@ -70,7 +74,7 @@ body {
     text-align: center;
     color: $title-color;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: 1199px) {
         font-size: 28px;
         line-height: 1;
         margin-bottom: 30px;

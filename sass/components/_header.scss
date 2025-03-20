@@ -2,6 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     background-color: $background-color;
     border-bottom: 1px solid $gorizontal-header-line;
 }
@@ -105,6 +106,8 @@
 .menu__btn {
     display: inline-flex;
     background-color: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: $header-text-color;
 
     transition: color $timing-function;
@@ -124,20 +127,30 @@
     &.is-open .icon__menu {
         display: none;
     }
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
 }
 
 .menu__container {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    font-size: 40px;
-    padding: 48px 40px;
     background-color: $background-color;
 
-    &.is-open {
-        display: flex;
+    @media screen and (max-width: 767px) {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 48px 40px;
+
+        
+        &.is-open {
+            display: block;
+
+
+        }
     }
 }
+    
