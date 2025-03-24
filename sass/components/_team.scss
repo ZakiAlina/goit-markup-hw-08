@@ -2,13 +2,24 @@
 
     @media screen and (min-width: $tablet) {
         display: flex;
+        flex-wrap: wrap;
+        margin-right: -30px;
+        margin-bottom: -30px;
     }
 
 }
 
 .team__item {
 
-    &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: calc((100% - 60px) / 2);
+        margin-right: 30px;
         margin-bottom: 30px;
     }
 
