@@ -1,16 +1,28 @@
 .features {
+    display: flex;
+    flex-wrap: wrap;
 
-    @media screen and (min-width: $tablet) {
-        display: flex;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
         justify-content: center;
+        margin-right: -30px;
+        margin-bottom: -30px;
     }
 
 }
 
 .features__item {
-    width: 100%;
 
-    &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        width: calc((100% - 60px) / 2);
+        margin-right: 30px;
         margin-bottom: 30px;
     }
 

@@ -136,10 +136,10 @@ body.modal-open {
   font-weight: 700;
   color: #2196f3;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .logo {
     font-size: 26px;
-    line-height: 1.1738461538;
+    line-height: 1;
   }
 }
 
@@ -167,13 +167,9 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 @media screen and (max-width: 767px) {
   .navigation {
-    width: 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -238,19 +234,17 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-left: auto;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts__item:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -292,8 +286,20 @@ body.modal-open {
   }
 }
 
-.contacts__icon {
-  margin-right: 10px;
+@media screen and (max-width: 767px) {
+  .contacts__icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__icon {
+    margin-right: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon {
+    margin-right: 10px;
+  }
 }
 
 .menu__btn {
@@ -348,15 +354,16 @@ body.modal-open {
 }
 @media screen and (min-width: 768px) {
   .menu__container {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -702,22 +709,37 @@ body.modal-open {
   background-color: #188ce8;
 }
 
-@media screen and (min-width: 768px) {
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .features {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-right: -30px;
+    margin-bottom: -30px;
   }
 }
 
-.features__item {
-  width: 100%;
+@media screen and (max-width: 767px) {
+  .features__item {
+    width: 100%;
+  }
+  .features__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
-.features__item:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .features__item {
+    width: calc((100% - 60px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .features__item {
@@ -798,13 +820,15 @@ body.modal-open {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-@media screen and (min-width: 768px) {
+.team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     margin-right: -30px;
     margin-bottom: -30px;
   }
@@ -817,11 +841,14 @@ body.modal-open {
   border-radius: 0px 0px 4px 4px;
 }
 @media screen and (max-width: 767px) {
+  .team__item {
+    width: 100%;
+  }
   .team__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team__item {
     width: calc((100% - 60px) / 2);
     margin-right: 30px;
@@ -899,26 +926,44 @@ body.modal-open {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: -30px;
+}
+@media screen and (max-width: 767px) {
+  .customers {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: -30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .customers {
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
 }
 
 .customers__item {
-  width: calc((100% - 60px) / 2);
-  margin-bottom: 30px;
+  height: 92px;
 }
-.customers__item:nth-child(odd) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .customers__item {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 30px;
+  }
+  .customers__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .customers__item {
+    width: calc((100% - 90px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .customers__item {
     width: 170px;
-    height: 92px;
   }
   .customers__item:not(:last-child) {
     margin-right: 30px;
@@ -957,19 +1002,36 @@ body.modal-open {
 .footer__container {
   text-align: center;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    text-align: left;
   }
 }
 
-.address__container {
-  margin-bottom: 60px;
+@media screen and (max-width: 767px) {
+  .address__container {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .address__container {
+    margin-right: 165px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .address__container {
@@ -979,7 +1041,11 @@ body.modal-open {
 
 .address {
   margin-top: 28px;
-  margin-bottom: 60px;
+}
+@media screen and (max-width: 767px) {
+  .address {
+    margin-bottom: 60px;
+  }
 }
 
 .address__list {
@@ -1006,7 +1072,6 @@ body.modal-open {
 
 .find-us {
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .find-us__list {
@@ -1051,9 +1116,16 @@ body.modal-open {
   background-color: #2196f3;
 }
 
-.subscribe {
-  width: 100%;
-  margin-top: 60px;
+@media screen and (max-width: 1199px) {
+  .subscribe {
+    width: 100%;
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    margin-left: auto;
+  }
 }
 
 .subscribe__form {
@@ -1076,6 +1148,14 @@ body.modal-open {
             align-items: center;
   }
 }
+@media screen and (min0width: 1200px) {
+  .subscribe__field {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 
 .subscribe__input {
   width: 100%;
@@ -1088,6 +1168,16 @@ body.modal-open {
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 15px 16px;
+}
+@media screen and (min-width: 768px) {
+  .subscribe__input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__input {
+    width: 358px;
+  }
 }
 
 .subscribe__btn {
@@ -1112,12 +1202,21 @@ body.modal-open {
   background-color: #2196f3;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  margin-top: 20px;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscribe__btn:hover, .subscribe__btn:focus {
   background-color: #188ce8;
+}
+@media screen and (max-width: 1199px) {
+  .subscribe__btn {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__btn {
+    margin-left: 12px;
+  }
 }
 
 .subscribe__icon {

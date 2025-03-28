@@ -7,15 +7,12 @@
     border-bottom: 1px solid $gorizontal-header-line;
 }
 
-
-
 .navigation {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;    
 
     @media screen and (max-width: 767px) {
-        width: 100%;
+
         justify-content: space-between;
     }
 }
@@ -74,17 +71,15 @@
 
 .contacts {
     display: flex;
-    margin-left: auto;
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
         flex-direction: column;
-        margin-left: auto;
     }
 }
 
 .contacts__item:not(:last-child) {
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) and (max-width: 1199px){
         margin-bottom: 10px;
     }
 
@@ -119,7 +114,18 @@
 }
 
 .contacts__icon {
-    margin-right: 10px;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 8px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 10px;
+    }
 }
 
 .menu__btn {
@@ -176,9 +182,10 @@
     }
 
     @media screen and (min-width: $tablet) {
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 }
     
