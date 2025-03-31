@@ -10,11 +10,6 @@
 .navigation {
     display: flex;
     align-items: center;    
-
-    @media screen and (max-width: 767px) {
-
-        justify-content: space-between;
-    }
 }
 
 .site-nav {
@@ -133,6 +128,7 @@
     background-color: transparent;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-left: auto;
     color: $header-text-color;
     z-index: 1;
 
@@ -160,6 +156,7 @@
 }
 
 .menu__container {
+    display: none;
     background-color: $background-color;
 
     @media screen and (max-width: 767px) {
@@ -170,7 +167,6 @@
         width: 100vw;
         height: 100vh;
         padding: 48px 40px;
-
         
         &.is-open {
             display: block;
