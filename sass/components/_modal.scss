@@ -10,11 +10,6 @@
     padding: 93px 15px;
     overflow-y: scroll;
 
-    @media screen and (min-width: $desktop) {
-
-    }
-
-
     &.is-hidden {
         opacity: 0;
         pointer-events: none;
@@ -24,20 +19,23 @@
 .modal {
     position: relative;
         border-radius: 4px;
-            background-color: $background-color;
-            box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-                0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        background-color: $background-color;
+        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+            0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    @media screen and (min-width: $tablet) {
+        width: 450px;
+        height: 609px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     @media screen and (min-width: $desktop) {
-        position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             width: 528px;
             height: 581px;
     }
-    
-
 }
 
 .modal__close-btn {
