@@ -1,10 +1,7 @@
 .portfolio__list {
     display: flex;
     flex-wrap: wrap;
-
-    @media screen and (min-width: $tablet) {
-        margin-bottom: -30px;
-    }
+    margin-bottom: -30px;
 
     @media screen and (min-width: $desktop) {
         margin-right: -30px;
@@ -13,18 +10,11 @@
 }
 
 .portfolio__item {
-
-    @media screen and (max-width: 767px) {
-        width: 100%;
-        
-        &:not(:last-child) {
-        margin-bottom: 30px;
-        }
-    }
+    width: 100%;
+    margin-bottom: 30px;
 
     @media screen and (min-width: $tablet) {
         width: calc((100% - 30px) / 2);
-        margin-bottom: 30px;
         
         &:nth-child(odd) {
             margin-right: 30px;
