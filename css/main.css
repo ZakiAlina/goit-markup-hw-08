@@ -432,36 +432,41 @@ body.modal-open {
 }
 
 .hero {
+  max-width: 1600px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2f303a;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/hero-bg-image.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero-bg-image.jpg");
+  /*
+  image-set('../images.hero-bg-image.jpg' 1x, '../images.hero-bg-image@2x.jpg' 2x);
+  */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/hero-bg-image@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero-bg-image@2x.jpg");
+  }
+}
+@media screen and (max-width: 1199px) {
+  .hero {
+    width: 100%;
     padding-top: 118px;
     padding-bottom: 118px;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
-  }
-}
-
-.hero__overlay {
-  max-width: 1600px;
-  height: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #2f303a;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-image.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-image.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-@media screen and (min-width: 1200px) {
-  .hero__overlay {
-    height: 600px;
   }
 }
 
