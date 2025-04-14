@@ -9,7 +9,11 @@
 
 .navigation {
     display: flex;
-    align-items: center;    
+    align-items: center;  
+
+    @media screen and (max-width: 767px) {
+        justify-content: space-between;
+    }
 }
 
 .site-nav {
@@ -155,7 +159,6 @@
     background-color: transparent;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-left: auto;
     color: $header-text-color;
     z-index: 1;
 

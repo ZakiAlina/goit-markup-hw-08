@@ -1,13 +1,13 @@
 .features {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
-        justify-content: center;
         margin-right: -30px;
         margin-bottom: -30px;
     }
-
+    
 }
 
 .features__item {
