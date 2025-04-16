@@ -13,6 +13,7 @@
 
     @media screen and (max-width: 767px) {
         justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -174,6 +175,8 @@
 
     &.is-open .icon__cross{
         display: block;
+        margin-top: 10px;
+        margin-right: 15px;
     }
 
     &.is-open .icon__menu {
@@ -221,6 +224,8 @@
 
     @media screen and (max-width: 767px) {
         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
     }
 }
 
@@ -233,7 +238,7 @@
 }
 
 .social-menu__item:not(:last-child) {
-    border-left: 1px solid rgba(33, 33, 33, 0.2);
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .social-menu__link {
