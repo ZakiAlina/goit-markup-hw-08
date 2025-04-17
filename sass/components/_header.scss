@@ -13,7 +13,6 @@
 
     @media screen and (max-width: 767px) {
         justify-content: space-between;
-        align-items: center;
     }
 }
 
@@ -120,8 +119,6 @@
         }
     }
 
-
-
     @media screen and (min-width: $tablet) {
         font-size: 12px;
         line-height: 1;
@@ -175,8 +172,6 @@
 
     &.is-open .icon__cross{
         display: block;
-        margin-top: 10px;
-        margin-right: 15px;
     }
 
     &.is-open .icon__menu {
@@ -252,4 +247,3 @@
 .social-menu__item:last-child>.social-menu__link {
     padding-right: 0;
 }
-
